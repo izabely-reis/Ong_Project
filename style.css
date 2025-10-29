@@ -1,1 +1,45 @@
-body{font-family:Arial,sans-serif;margin:0;padding:0;}h1,h2,h3{color:#2a5d84;}
+/* Mobile-first CSS */
+:root{
+--max-width: 1100px;
+--accent: #2a7ae2;
+--bg: #ffffff;
+--muted: #666;
+}
+*{box-sizing:border-box}
+body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;background:var(--bg);color:#111;margin:0}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem;background:#000;color:#fff}
+.site-header{background:linear-gradient(90deg,#f7f9ff,#eef6ff);padding:.8rem 0}
+.site-header h1{margin:0;font-size:1.25rem}
+.tagline{margin:0;font-size:.95rem;color:var(--muted)}
+.nav-list{list-style:none;padding:0;margin:.5rem 0 0;display:flex;gap:.5rem}
+.nav-list a{color:var(--accent);text-decoration:none}
+h2{font-size:1.125rem}
+.project-card{border:1px solid #eee;padding:.8rem;margin-bottom:1rem;border-radius:8px}
+.project-card img{max-width:100%;height:auto;border-radius:6px}
+.button{display:inline-block;padding:.5rem .75rem;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;border:none}
+.button.secondary{background:#f1f1f1;color:#111}
+.fieldset, fieldset{border:1px solid #ddd;padding:.75rem;border-radius:6px;margin-bottom:1rem}
+label{display:block;margin-top:.5rem}
+input[type=text],input[type=email],input[type=tel],input[type=date],select{width:100%;padding:.5rem;border:1px solid #ccc;border-radius:6px}
+.checkbox-group label{display:inline-block;margin-right:1rem}
+.form-actions{margin-top:1rem}
+.highlight{background:#f8fbff;padding:.75rem;border-radius:8px}
+.progress{background:#eee;border-radius:6px;overflow:hidden;height:1.8rem}
+.progress-fill{height:100%;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff}
+footer{background:#fafafa;padding:1rem;margin-top:1rem}
+
+
+/* Breakpoints */
+@media(min-width:700px){
+.nav-list{gap:1rem}
+.site-header h1{font-size:1.5rem}
+h2{font-size:1.4rem}
+.project-card{display:flex;gap:1rem}
+.project-card img{max-width:40%}
+}
+
+
+/* Accessibility focus styles */
+a:focus,input:focus,select:focus,button:focus{outline:3px solid #ffd54f;outline-offset:2px}
